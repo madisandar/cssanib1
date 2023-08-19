@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+</head>
+<style type="text/css">
+body{
+	height:  100vh;
+	background-color:  #272727;
+
+	display: flex;
+	justify-content:  center;
+	align-items:  center;
+}
+.loader{
+	width:  70px;
+display: flex;
+}
+span{
+	width:  10px;
+	height:  60px;
+	background-color:  #fff;
+	margin: 0 1px;
+
+	animation-name:  myani;
+	animation-duration:  0.8s;
+	animation-timing-function:  ease-in-out;
+	animation-iteration-count:  infinite;
+
+}
+@keyframes myani{
+	0%{
+ transform:  scaleY(0.1);
+	}
+	30%{
+    transform: scaleY(1);
+	}
+	60%,100%{
+		transform:  scaleY(0.1);
+	}
+}
+
+span:nth-child(1){
+	background-color:  yellow;
+	animation-delay:  0.2s;
+
+}
+span:nth-child(2){
+	background-color:  green;
+	animation-delay:  0.3s;
+}
+span:nth-child(3){
+	background-color:  yellow;
+	animation-delay:  0.4s;
+}
+span:nth-child(4){
+	background-color: red;
+	animation-delay:  0.5s;
+}
+span:nth-child(5){
+	background-color: violet;
+	animation-delay:  0.6s;
+	} 
+span:nth-child(6){
+	background-color:  yellow;
+	animation-delay:  0.7s;
+}
+</style>
+<body>
+	<div class="loader">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	</body>
+</html>

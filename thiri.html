@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rotate Border Effect</title>
+</head>
+<style type="text/css" >
+body{
+   background-color:  #000;
+   height:  100vh;
+
+   display:  flex;
+   justify-content:  center;
+   align-items:  center;
+
+   margin:  0;
+   overflow:  hidden;
+}
+
+a{
+   text-decoration:  none;
+   color:  #00aeff;
+   font-size:  18px;
+   text-transform:  uppercase;
+   letter-spacing:  3px;
+   border:  2px solid #00aeff;
+   padding:  20px 40px;
+
+   position:  relative;
+   overflow:  hidden;
+
+}
+
+a:hover{
+   color:  #fff;
+}
+
+a:hover .wave{
+   top:  0;
+}
+.wave{
+   width:  100%;
+   height: 100%;
+   background-color:  #00aeff;
+
+   position:  absolute;
+   top:  calc(100% + 22px);
+   left:  0;
+
+   z-index:  -1;
+   transition:  all 1s;
+}
+
+.wave::before{
+   content:  '';
+   width:  100%;
+   height:  22px;
+   background-image:  url(img/wave.png);
+
+ position:  absolute;
+ top:  -22px;
+ left:  0;
+
+ animation-name:  myani;
+ animation-duration:  0.5s;
+ animation-timing-function:  linear;
+ animation-iteration-count:  infinite;
+}
+
+@keyframes myani{
+   0%{
+  background-position-x:  0px;
+   }
+
+   100%{
+    background-position-x:  110px;
+   }
+}
+
+</style>
+<body>
+
+   <a href="#"><span class="wave"></span>Hover Me</a>
+</body>
+</html>

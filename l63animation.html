@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heart Beat</title>
+	</head>
+	<style type="text/css">
+	body{
+		background-color:  #262626;
+		height:  100vh;
+
+		display: flex;
+		justify-content:  center;
+		align-items:  center;
+
+		margin:  0;
+		overflow:  hidden;
+
+	}
+	.heart{
+		width:  100px;
+		height:  100px;
+		background-color: red;
+
+		transform:  rotate(45deg);
+		position:  relative;
+
+		animation-name:  myani;
+		animation-duration:  1.5s;
+		animation-timing-function:  linear;
+		animation-iteration-count:  infinite;
+	}
+	.heart::before{
+		content:  '';
+		width:  100%;
+		height:  100%;
+		background-color: red;
+		border-radius:  50%;
+
+		position:  absolute;
+		top:  0;
+		left:  0;
+
+		transform:  translateY(-50px);
+	}
+	.heart::after{
+		content:  '';
+		width:  100%;
+		height:  100%;
+		background-color: red;
+		border-radius:  50%;
+
+		position:  absolute;
+		top:  0;
+		left:  0;
+
+		transform:  translate(-50px);
+	}
+	@keyframes myani{
+		0%{
+          transform:  rotate(45deg) scale(1);
+		}
+		30%{
+   transform:  rotate(45deg) scale(1);
+		}
+		50%{
+   transform:  rotate(45deg) scale(1.4)
+			}
+			70%{
+    transform:  rotate(45deg) scale(1.2)
+			}
+		100%{
+        transform:  rotate(45deg) scale(1);
+		} 
+	}
+</style>
+	<body>
+		<div class="heart">
+		</div>
+	</body>
+</html>

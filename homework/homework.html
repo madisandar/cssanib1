@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First css project</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<style type="text/css">
+	body{
+		height:  100vh;
+		background-color:  #9803fc;
+
+		display: flex;
+		justify-content:  center;
+		align-items:  center;
+
+		margin:  0;
+		overflow:  hidden;
+	}
+	ul{
+		padding:  0;
+		margin:  0;
+		display: flex;
+		overflow:  hidden;
+	}
+ ul li{
+ 	width:  150px;
+ 	height:  150px;
+ 	background-color: seagreen;
+		
+		
+ 	border-radius:  50%;
+ 	margin:  0 20px;
+ 	position: relative;
+
+ 	animation-name:  myani;
+		animation-duration:  1s;
+		animation-timing-function:  linear;
+		animation-iteration-count:  infinite;
+ }
+  ul li i{
+  	width:  50px;
+  	height:  50px;
+  	font-size:  50px;
+
+  position:  absolute;
+  top:  50%;
+  left:  50%;
+
+  transform:  translate(-50%,-50%);
+  }
+ 
+  
+	.third{
+		width:  70px;
+		height: 70px;
+	background-color:  transparent;
+		border-left:  5px solid #000;
+				border-radius:  50%;
+		position:  absolute;
+  top:  50%;
+  left:  50%;
+  
+  transform:  translate(-50%,-50%);
+	}
+	li span{
+		width:  15px;
+		height:  15px;
+		background-color:  #000;
+		border-radius:  50%;
+		display: flex;
+  
+		position:  absolute;
+		top:  50%;
+		left:  50%;
+		transform:  translate(-50%,-50%);
+
+
+  }
+  .one{
+  	top:  50%;
+  	left:  30%;
+  
+  }
+  .two{
+  	top:  50%;
+  	left:  40%;
+  	
+  }
+  .three{
+  	top:  50%;
+  	left:  50%;
+  	
+  			
+  }
+  .four{
+  	top:  50%;
+  	left:  60%;
+  
+  }
+  @keyframes myani{
+  		from{
+        transform:  scale(0.92) rotate(0);
+		}
+		to{
+       transform:  scale(0.92) rotate(1turn);
+		}
+	}
+  
+  
+	</style>
+	<body>
+		
+			<ul>
+				<li><i class="fas fa-spinner"></i></li>
+			<li><i class="far fa-clock"></i></li>
+		<li>	<i class="fas fa-ring"></i></li>
+			<li><span class="third"></span></li>
+			<li><span class="one"></span>
+				<span class="two"></span>
+				<span class="three"></span>
+				<span class="four"></span>
+			</li>
+		</ul>
+		
+	</body>
+	</html>
